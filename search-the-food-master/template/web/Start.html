@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		 $(document).on("click", ".start", function () {
+
+		 	var id = $(this).attr("id");
+
+		 	//limpiamos
+		 	for(var i=1; i<=5; i++){
+		 		$('#'+i).addClass("glyphicon-star-empty");
+	            $('#'+i).removeClass("glyphicon-star");
+		 	}
+
+		 	for(var j=1; j<=parseInt(id); j++){
+		 		$('#'+j).removeClass("glyphicon-star-empty");
+	            $('#'+j).addClass("glyphicon-star");
+		 	}
+	        
+	    });
+
+	</script>
+</head>
+<body>
+
+	<span class="start glyphicon glyphicon-star-empty" aria-hidden="true" id="1"></span>
+	<span class="start glyphicon glyphicon-star-empty" aria-hidden="true" id="2"></span>
+	<span class="start glyphicon glyphicon-star-empty" aria-hidden="true" id="3"></span>
+	<span class="start glyphicon glyphicon-star-empty" aria-hidden="true" id="4"></span>
+	<span class="start glyphicon glyphicon-star-empty" aria-hidden="true" id="5"></span>
+	
+
+	
+</body>
+</html>
